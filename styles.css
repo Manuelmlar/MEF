@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    cursor: url('img/6.1.png'), auto; /* Asegúrate de que la ruta sea correcta */
+}
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(244, 244, 244, 0.2);
+    padding: 0.5rem;
+    text-align: center;
+    color: #fff;
+    position: absolute; /* Hace que el header se posicione encima de la hero-section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Asegura que el header esté por encima de la hero-section */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; 
+    width: auto;  
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.hero-section {
+    background: url("./img/3.png") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative; /* Asegura que la hero-section esté detrás del header */
+    margin-top: 0; /* Asegura que la sección hero no tenga margen superior */
+}
+
+.hero-text h2 {
+    font-size: 6rem;
+    margin-bottom: -2rem;
+}
+
+.hero-section2 {
+    background: url("./img/2.jpg") no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.hero-text2 h2 {
+    font-size: 6rem;
+    margin-bottom: -2rem;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    100% { border-color: white; }
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    border-right: 4px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: 
+        typing 3s steps(30, end) forwards,
+        blink 0.75s step-end infinite;
+}
+
+.btn {
+    background-color: #F7C871;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about-section, .services-section, .contact-section {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+
+
+.about-item {
+    flex: 1;
+    margin: 0 1rem;
+    background-color: #F7C871;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(20px); /* Mueve el elemento hacia abajo para el efecto de entrada */
+    transition: opacity 1.5s ease, transform 1.5s ease; /* Transiciones suaves para la opacidad y la posición */
+}
+
+.about-item.visible {
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* Vuelve a la posición original */
+}
+
+.service-item {
+    flex: 1;
+    margin: 0 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px;
+}
+
+/* Estilos para el contenedor del efecto de volteo */
+.flip-container {
+    perspective: 1000px; /* Proporciona una perspectiva 3D */
+    margin: 1rem;
+    flex: 1;
+    margin: 0 0rem;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.flipper {
+    position: relative;
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    height: 100%; /* Ajusta el tamaño según sea necesario */
+    transform-style: preserve-3d; /* Habilita el efecto 3D */
+    transition: transform 0.6s; /* Transición suave */
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg); /* Gira el elemento en el eje Y */
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la cara trasera cuando se voltea */
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #333;
+}
+
+
+
+.back {
+    transform: rotateY(180deg); /* Gira la cara trasera para que esté al revés */
+    background-color: #F7C871; /* Color de fondo de la cara trasera */
+    color: #fff; /* Color del texto de la cara trasera */
+}
+
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    background-color: #004d00; /* Verde del logo */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Estilos para la flecha de volver al inicio */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F7C871; /* Fondo oscuro para la flecha */
+    color: #fff; /* Color del icono de la flecha */
+    padding: 4px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px; /* Tamaño del icono de la flecha */
+    opacity: 0;
+    transition: opacity 0.6s;
+    z-index: 1000; /* Asegura que la flecha esté por encima de otros elementos */
+}
+
+.scroll-to-top i {
+    font-size: 24px; /* Tamaño del icono de la flecha */
+}
+
+.scroll-to-top:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+
+.scroll-to-top.show {
+    opacity: 1; /* Hace que la flecha sea visible */
+}
+
