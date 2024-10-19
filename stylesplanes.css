@@ -1,0 +1,256 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("./img/1.2.png");
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(244, 244, 244, 0.2);
+    padding: 0.5rem;
+    text-align: center;
+    color: #fff;
+    position: absolute; /* Hace que el header se posicione encima de la hero-section */
+    top: 0;
+    left: 0;
+    width: 90%;
+    z-index: 10; /* Asegura que el header esté por encima de la hero-section */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; 
+    width: auto;  
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+    background: linear-gradient(135deg, #427434, #c2e5c9);
+  border: none; /* Sin borde */
+  padding: 5px 30px; /* Espacio alrededor del texto */
+  display: inline-block; /* Asegura que el padding y el border-radius se apliquen correctamente */
+  font-size: 16px; /* Tamaño del texto */
+  margin: 10px 2px; /* Espacio alrededor del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el enlace */
+    border-radius: 100px 0px 100px 0px; /* Bordes redondeados */
+  transition: background 0.5s, transform 0.5s, border-radius 0.5s; /* Transiciones suaves */
+}
+
+.nav-links li:hover {
+  background: linear-gradient(135deg, #427434, #c2e5c9);
+  border-radius: 100px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+hr {
+border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+h2 {
+    background: linear-gradient(135deg, #427434, #c2e5c9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.plan {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    margin: 0 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.plan input[type="radio"] {
+    display: none;
+}
+
+.plan .content {
+    pointer-events: none;
+}
+
+.plan:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.plan.selected {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid gray;
+}
+
+.checkmark {
+    position: absolute;
+    top: 10px; /* Ajusta esto para posicionar el chulito */
+    right: 10px; /* Ajusta para posicionar el chulito más cerca de la esquina */
+    width: 24px; /* Tamaño del círculo */
+    height: 24px; /* Tamaño del círculo */
+    background-image: url('./img/check1.png'); /* Ruta a tu imagen */
+    background-size: cover; /* Asegúrate de que la imagen cubra el círculo */
+    background-position: center; /* Centra la imagen dentro del círculo */
+    border-radius: 50%; /* Hace que sea un círculo */
+    visibility: hidden; /* El ícono no será visible hasta que el plan sea seleccionado */
+    z-index: 2; /* Asegura que el chulito esté encima del contenido del plan */
+}
+
+.plan.selected .checkmark {
+    visibility: visible;
+}
+
+.price {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    color: #666;
+    text-align: left;
+}
+
+.plan ul li {
+    margin: 10px 0;
+}
+
+.plan.basic .quality {
+    background: linear-gradient(135deg, #654321, #d0bba9);
+}
+
+.next-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 40px;
+    background: rgb(253,187,45);
+background: linear-gradient(135deg, #427434, #c2e5c9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para la ventana modal */
+.modal {
+    display: none; /* Oculta la ventana por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegura que se coloque por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+}
+
+.modal.show {
+    display: block; /* Muestra la ventana */
+    opacity: 1; /* Hace que la ventana sea visible */
+}
+
+/* Animación de entrada del modal */
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px); /* Inicia fuera de la pantalla, arriba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* Animación de salida del modal */
+@keyframes modalOut {
+    from {
+        opacity: 1;
+        transform: translateY(0); /* Comienza en su posición actual */
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100px); /* Se desplaza hacia arriba y desaparece */
+    }
+}
+
+.modal-content {
+    background: url("./img/1.2.png");
+    margin: 10% auto; /* Centra el modal verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    animation: modalIn 0.5s forwards; /* Animación de entrada por defecto */
+}
+
+.modal.hide .modal-content {
+    animation: modalOut 0.5s forwards; /* Aplica la animación de salida */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+

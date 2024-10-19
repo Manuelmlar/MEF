@@ -1,0 +1,245 @@
+/* Reset de márgenes y estilo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: url("./img/1.2.png");
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+    height: 60px; 
+    width: auto;  
+}
+
+header h1 {
+  font-size: 2em;
+  color: #2d3436;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #636e72;
+}
+
+section {
+  margin: 20px auto; /* Centra el contenedor horizontalmente */
+  background: #fff;
+  padding: 20px;
+  width: 50vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+section h2 {
+  font-size: 1.6em;
+  color: #0984e3;
+  background: linear-gradient(135deg, #427434, #c2e5c9); /* Degradado de color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el degradado */
+  margin-bottom: 10px;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .image-placeholder {
+  background-color: #ecf0f1;
+  border: px dashed #bdc3c7;
+  width: 25vw; /* Ajusta el ancho del contenedor */
+  height: 225px; /* Ajusta la altura del contenedor */
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f8c8d;
+  font-size: 1em;
+  overflow: hidden; /* Recorta la imagen si sobresale */
+  position: relative;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+    transform: translate(0%, 0%); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-placeholder:hover {
+    transform: scale(1.0);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+}
+
+.image-placeholder1 {
+  background-color: #ecf0f1;
+  border: px dashed #bdc3c7;
+  width: 19vw; /* Ajusta el ancho del contenedor */
+  height: 305px; /* Ajusta la altura del contenedor */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f8c8d;
+  font-size: 1em;
+  overflow: hidden; /* Recorta la imagen si sobresale */
+  position: relative;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  transform: translate(0%, 0%); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-placeholder1:hover {
+    transform: scale(1.0);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+}
+
+
+    .image-placeholder img {
+      width: 100%; /* Haz la imagen más grande para que sea más notorio el movimiento */
+      height: auto;
+      object-fit: cover; /* Mantiene la proporción y recorta los bordes */
+      transition: transform 0.5s ease; /* Transición suave */
+      position: absolute; /* Permite mover la imagen dentro del contenedor */
+      top: 0px; left: 0px;
+    }
+
+    .image-placeholder:hover img {
+      transform: translate(0%, 0%); /* Mueve la imagen ligeramente al hacer hover */
+    }
+
+
+section p, section ul {
+  font-size: 1em;
+  color: #555;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+.texto {
+text-align: center;
+}
+
+@media (min-width: 768px) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+
+.enlace-menu {
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  color: #fff; /* Color del texto del enlace */
+  background: linear-gradient(135deg, #427434, #c2e5c9); /* Degradado de fondo */
+  border: none; /* Sin borde */
+  padding: 5px 30px; /* Espacio alrededor del texto */
+  text-align: center; /* Centra el texto */
+  display: inline-block; /* Asegura que el padding y el border-radius se apliquen correctamente */
+  font-size: 16px; /* Tamaño del texto */
+  margin: 4px 2px; /* Espacio alrededor del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el enlace */
+    border-radius: 100px 0px 100px 0px; /* Bordes redondeados */
+  transition: background 0.5s, transform 0.5s, border-radius 0.5s; /* Transiciones suaves */
+}
+
+.enlace-menu:hover {
+  background: linear-gradient(135deg, #427434, #c2e5c9); /* Cambia el degradado de fondo */
+  border-radius: 100px;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    border: 3px solid #4CAF50;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #427434, #c2e5c9);
+  }
+
+  /* Efecto de hover en el contenedor */
+  .audio-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Estilo del reproductor */
+  .audio-player {
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+  }
+
+  /* Estilo de los controles (solo para navegadores WebKit como Chrome, Safari) */
+  .audio-player::-webkit-media-controls-play-button {
+    background-color: #427434;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .audio-player::-webkit-media-controls-play-button:hover {
+    background-color: #c2e5c9;
+    transform: scale(1.1);
+  }
+
+  /* Estilo del slider de volumen y del tiempo */
+  .audio-player::-webkit-media-controls-volume-slider,
+  .audio-player::-webkit-media-controls-timeline {
+    background: linear-gradient(135deg, #427434, #c2e5c9);
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+
+  /* Efectos adicionales en los controles */
+  .audio-player::-webkit-media-controls-panel {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+  }
+
+/* Estilos para la flecha de volver al inicio */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #427434; /* Fondo oscuro para la flecha */
+    color: #fff; /* Color del icono de la flecha */
+    padding: 4px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px; /* Tamaño del icono de la flecha */
+    opacity: 0;
+    transition: opacity 0.6s;
+    z-index: 1000; /* Asegura que la flecha esté por encima de otros elementos */
+}
+
+.scroll-to-top i {
+    font-size: 24px; /* Tamaño del icono de la flecha */
+}
+
+.scroll-to-top:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+
+.scroll-to-top.show {
+    opacity: 1; /* Hace que la flecha sea visible */
+}

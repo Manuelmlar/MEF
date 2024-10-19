@@ -1,0 +1,196 @@
+/* Reset de márgenes y estilo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: url("./img/1.2.png");
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+    height: 60px; 
+    width: auto;  
+}
+
+
+header h1 {
+  font-size: 2em;
+  color: #2d3436;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #636e72;
+}
+
+.eventos {
+  margin: 0px 150px;
+}
+
+article {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+article h2 {
+  font-size: 1.6em;
+  color: #0984e3;
+  background: linear-gradient(135deg, #654321, #d0bba9); /* Degradado de color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el degradado */
+  margin-bottom: 10px;
+}
+
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .small-image-container {
+      position: fixed;
+      bottom: 200px;
+      border-radius: 10px;
+      right: 10px;
+      width: 100px;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .small-image-container:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px;
+}
+    
+    .small-image-container img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Estilos para el mensaje */
+    .small-image-container .message {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    /* Estilos para la imagen ampliada */
+    .full-image-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+    }
+
+    .full-image-overlay img {
+      max-width: 100%;
+      max-height: 100%;
+      cursor: grab;
+    }
+
+    /* Estilos para el botón de cierre */
+    .close-button {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      background-color: #654321;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      font-size: 12px;
+      color: white;
+      font-weight: bold;
+    }
+
+article p {
+  font-size: 1em;
+  color: #555;
+}
+
+@media (min-width: 768px) {
+  .eventos {
+    display: full;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+
+.enlace-menu {
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  color: #fff; /* Color del texto del enlace */
+  background: linear-gradient(135deg, #654321, #d0bba9); /* Degradado de color */
+  border: none; /* Sin borde */
+  padding: 5px 30px; /* Espacio alrededor del texto */
+  text-align: center; /* Centra el texto */
+  display: inline-block; /* Asegura que el padding y el border-radius se apliquen correctamente */
+  font-size: 16px; /* Tamaño del texto */
+  margin: 4px 2px; /* Espacio alrededor del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el enlace */
+    border-radius: 100px 0px 100px 0px; /* Bordes redondeados */
+  transition: background 0.5s, transform 0.5s, border-radius 0.5s; /* Transiciones suaves */
+}
+
+.enlace-menu:hover {
+  background: linear-gradient(135deg, #654321, #d0bba9); /* Degradado de color */
+  border-radius: 100px;
+}
+
+/* Estilos para la flecha de volver al inicio */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #654321; /* Fondo oscuro para la flecha */
+    color: #fff; /* Color del icono de la flecha */
+    padding: 4px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px; /* Tamaño del icono de la flecha */
+    opacity: 0;
+    transition: opacity 0.6s;
+    z-index: 1000; /* Asegura que la flecha esté por encima de otros elementos */
+}
+
+.scroll-to-top i {
+    font-size: 24px; /* Tamaño del icono de la flecha */
+}
+
+.scroll-to-top:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+
+.scroll-to-top.show {
+    opacity: 1; /* Hace que la flecha sea visible */
+}
