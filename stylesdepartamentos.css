@@ -574,3 +574,25 @@ iframe {
     color: black;
     opacity: 0.1;
 }
+
+.explore-button {
+  background-color: #427434;       /* Color de fondo verde elegante */
+  color: #fff;                     /* Color de texto blanco */
+  padding: 10px 20px;              /* Espaciado interno */
+  border: none;                    /* Sin borde */
+  border-radius: 8px;              /* Bordes redondeados */
+  font-size: 16px;                 /* Tamaño de fuente */
+  font-family: Arial, sans-serif;  /* Fuente simple y limpia */
+  cursor: pointer;                 /* Cambia el cursor a puntero */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
+}
+
+.explore-button:hover {
+  background-color: #345a28;       /* Color de fondo un poco más oscuro al pasar el cursor */
+  transform: scale(1.05);          /* Agranda ligeramente el botón */
+}
+
+.explore-button:focus {
+  outline: none;                   /* Elimina el borde de enfoque predeterminado */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra para el enfoque */
+}

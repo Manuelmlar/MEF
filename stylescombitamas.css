@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #427434CC, #c2e5c9CC);
+    color: #fff;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilos para la lista */
+.tourist-attractions {
+  list-style: none; /* Elimina el estilo de lista por defecto */
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px; /* Mayor ancho para aprovechar el espacio */
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Disposición en columnas */
+  gap: 10px;
+}
+
+.tourist-attractions li {
+  background-color: #f5f7fa;
+  padding: 10px 15px; /* Reduce el padding */
+  border-radius: 6px; /* Bordes más sutiles */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4; /* Mejor espacio entre líneas */
+  display: flex;
+  align-items: center;
+}
+
+/* Agrega un ícono personalizado o un marcador */
+.tourist-attractions li::before {
+  content: "🧳"; /* Puedes cambiar este símbolo por otro */
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-right: 8px;
+}
+
+/* Efecto hover */
+.tourist-attractions li:hover {
+  background: linear-gradient(135deg, #42743466, #c2e5c966);
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #427434, #c2e5c9);
+    border-radius: 100px 0px 100px 0px;
+}
+
+section {
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+    background: url("./img/1.2.png");
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#lugares {
+    padding: 1rem 2rem;
+    margin: 6rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #006400;
+}
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carrusel-container {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  width: 100%;
+  height: 300px;
+}
+
+.container .content {
+  flex: 0 0 120px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: flex 0.5s ease-in-out, box-shadow 0.5s ease-in-out, transform 0.5s;
+  box-shadow: 1px 5px 15px black;
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.container .content h2 {
+  margin-bottom: 5px;
+}
+
+.container .content span {
+  font-size: 1.2rem;
+}
+
+.container:hover .content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.container .content:hover {
+  flex: 0 0 250px;
+  box-shadow: 1px 3px 5px green;
+  transform: translateY(-30px);
+}
+
+/* Contenedor principal */
+.biodiversity {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de Flora y Fauna */
+.biodiversity section {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.biodiversity section:hover {
+  transform: translateY(-5px);
+}
+
+.biodiversity h2 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.biodiversity p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.biodiversity ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.biodiversity li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.biodiversity li::before {
+  content: "🌿"; /* Icono para flora */
+  font-size: 1.2rem;
+  color: #388e3c;
+}
+
+.fauna li::before {
+  content: "🐾"; /* Icono para fauna */
+  font-size: 1.2rem;
+  color: #7b1fa2;
+}
+
+/* Contenedor principal */
+.veredas {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: url("./img/1.2.png");
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.veredas h2 {
+  font-size: 1.8rem;
+  color: #4a7c59;
+  margin-bottom: 20px;
+}
+
+/* Estilos de lista de veredas */
+.vereda-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.vereda {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vereda:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #42743466, #c2e5c966);
+}
+
+.vereda h3 {
+  font-size: 1.4rem;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.vereda p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contenedor principal */
+.eventos {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: url("./img/1.2.png");
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventos h2 {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* Estilos de lista de eventos */
+.evento-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.evento {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.evento:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #42743466, #c2e5c966);
+}
+
+.evento h3 {
+  font-size: 1.4rem;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.evento p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contenedor principal del escudo */
+.escudo-container {
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del escudo */
+.escudo-img img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Información sobre el escudo */
+.escudo-info {
+  color: #4b3f2f;
+  font-family: Arial, sans-serif;
+}
+
+.escudo-info h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.escudo-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Contenedor principal de la bandera */
+.bandera-container {
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de la bandera */
+.bandera-img img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Información sobre la bandera */
+.bandera-info {
+  color: #2e4053;
+  font-family: Arial, sans-serif;
+}
+
+.bandera-info h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.bandera-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Contenedor del himno */
+.himno-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Estilo del título del himno */
+.himno-container h2 {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* Versos del himno */
+.himno-versos p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #444;
+}
+
+/* Numeración en negrita */
+.himno-versos p strong {
+  font-size: 1.2rem;
+  color: #2e7d32;
+}
+
+/* Información sobre los autores */
+.himno-autores {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* Estilos para la flecha de volver al inicio */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #427434CC, #c2e5c9CC); /* Fondo oscuro para la flecha */
+    color: #fff; /* Color del icono de la flecha */
+    padding: 4px 15px;
+    border-radius: 20%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px; /* Tamaño del icono de la flecha */
+    opacity: 0;
+    transition: opacity 0.6s;
+    z-index: 1000; /* Asegura que la flecha esté por encima de otros elementos */
+}
+
+.scroll-to-top i {
+    font-size: 24px; /* Tamaño del icono de la flecha */
+}
+
+.scroll-to-top:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+
+.scroll-to-top.show {
+    opacity: 1; /* Hace que la flecha sea visible */
+}
